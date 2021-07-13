@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:string_validator/string_validator.dart';
 
 class MyCustomTextField extends StatelessWidget{
   String lable;
@@ -9,16 +10,24 @@ class MyCustomTextField extends StatelessWidget{
     return Container(
       margin: EdgeInsets.all(20),
       child: TextFormField(
-        // onSaved: (value){
-        //   setEmail(value);
-        // },
-        // validator: (String value){
-        // if(value.length==0){
-        //   return 'Requerd filed';
-        // }else if(isEmai){
-        //
-        // }
-        // }
+        onSaved: (value){
+           // if(lable=='Name')
+           //   ;
+           // else if(lable=='Password')
+           //   ;
+           // else if(lable=='ShopName')
+           //   ;
+           // else if(lable=='ShopCategory')
+           //   ;
+           // else if(lable=='Bio')
+                     },
+        validator: (String value){
+        if(value.length==0){
+          return 'Requerd filed';
+        }else if(isEmail(value)){
+
+        }
+        },
 
 
         decoration: InputDecoration(

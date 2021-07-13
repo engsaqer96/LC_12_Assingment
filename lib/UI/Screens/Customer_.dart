@@ -12,11 +12,13 @@ class CustomerPage extends StatefulWidget{
 class _CustomerPageState extends State<CustomerPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      MyCustomTextField('Name'),
-      MyCustomTextField('Password'),
-      CustomDropDawn()
-    ,CustomElevatedButton()],);
+    return SingleChildScrollView(
+      child: Column(children: [
+        MyCustomTextField('Name'),
+        MyCustomTextField('Password'),
+        CustomDropDawn()
+      ,CustomElevatedButton(lable: 'home')],),
+    );
 
   }
 }

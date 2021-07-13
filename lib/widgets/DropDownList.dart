@@ -14,13 +14,16 @@ class _CustomDropDawnState extends State<CustomDropDawn> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(20),
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.indigo),
-        borderRadius: BorderRadius.
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.blue.withOpacity(.2)
+        
 
       ),
       child: DropdownButton<String>(
+        isExpanded: true,
           value: currentCategory,
         onChanged: (v){
         currentCategory=v;

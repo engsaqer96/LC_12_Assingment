@@ -13,13 +13,15 @@ class _MershatPageState extends State<MershatPage> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleColumn(children: [
-      MyCustomTextField('Name'),
-      MyCustomTextField('Password'),
-      MyCustomTextField('ShopName'),
-      MyCustomTextField('ShopCatg'),
-      MyCustomTextField('Bio'),
-      CustomDropDawn(),
-      CustomElevatedButton()],);
+    return SingleChildScrollView(
+      child: Column(children: [
+        MyCustomTextField('Name'),
+        MyCustomTextField('Password'),
+        MyCustomTextField('ShopName'),
+        MyCustomTextField('ShopCategory'),
+        MyCustomTextField('Bio'),
+        CustomDropDawn(),
+        Row(children: [CustomElevatedButton(lable: 'home'),CustomElevatedButton(lable:'second')],)],),
+    );
   }
 }
